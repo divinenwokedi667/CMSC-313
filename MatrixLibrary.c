@@ -80,6 +80,7 @@ Matrix multiply(Matrix* a, Matrix* b) {
     Matrix result = createMatrix(a->rows, b->cols);
     for (int i = 0; i < result.rows; i++) {
         for (int j = 0; j < result.cols; j++) {
+            result.vals[i][j] = 0;
             for (int k = 0; k < a->cols; k++) {
                 result.vals[i][j] += a->vals[i][k] * b->vals[k][j];
             }
@@ -112,7 +113,6 @@ int main() {
     Matrix C = createMatrix(2, 3);
     set(&C, 0, 0, 2); set(&C, 0, 1, 4); set(&C, 0, 2, 6);
     set(&C, 1, 0, 1); set(&C, 1, 1, 3); set(&C, 1, 2, 5);
-
 
     //Creating Versions of Matrices Needed for Equation
     Matrix B3 = scalarMultiply(&B, 3);
