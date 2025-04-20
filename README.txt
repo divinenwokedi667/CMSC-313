@@ -18,7 +18,7 @@ For MatrixLibrary.cpp:
 Use the command g++ -o MatrixLibraryPlus.out MatrixLibrary.cpp
 Then the command MatrixLibraryPlus.out to run
 For MatrixLibrary.c:
-Use the command gcc -o MatrixLibraryC.out MatrixLibrary.c
+Use the command gcc -std=c99 -32 -o MatrixLibraryC.out MatrixLibrary.c
 Then the command MatrixLibraryC.out to run
 
 TESTING METHODOLOGY:
